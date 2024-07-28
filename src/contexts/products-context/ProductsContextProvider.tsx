@@ -1,5 +1,4 @@
-import { createContext, useContext, FC, useState } from 'react';
-
+import { createContext, useContext, FC, useState, ReactNode } from 'react';
 import { IProduct } from 'models';
 
 export interface IProductsContext {
@@ -9,6 +8,10 @@ export interface IProductsContext {
   setProducts(products: IProduct[]): void;
   filters: string[];
   setFilters(filters: string[]): void;
+}
+
+export interface ProductsProviderProps {
+  children: ReactNode;
 }
 
 const ProductsContext = createContext<IProductsContext | undefined>(undefined);
@@ -24,7 +27,7 @@ const useProductsContext = (): IProductsContext => {
   return context;
 };
 
-const ProductsProvider: FC = (props) => {
+const ProductsProvider: FC<ProductsProviderProps> = ({ children }) => {
   const [isFetching, setIsFetching] = useState(false);
   const [products, setProducts] = useState<IProduct[]>([]);
   const [filters, setFilters] = useState<string[]>([]);
@@ -38,7 +41,11 @@ const ProductsProvider: FC = (props) => {
     setFilters,
   };
 
-  return <ProductsContext.Provider value={ProductContextValue} {...props} />;
+  return (
+    <ProductsContext.Provider value={ProductContextValue}>
+      {children}
+    </ProductsContext.Provider>
+  );
 };
 
 export { ProductsProvider, useProductsContext };
