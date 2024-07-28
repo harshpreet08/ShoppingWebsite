@@ -22,6 +22,7 @@ function Login() {
 
     try {
       const response = await fetch(
+        //My API Gateway URL
         'https://f7z9voe3d5.execute-api.us-east-1.amazonaws.com/ReactShopping-dev/login',
         {
           method: 'POST',
