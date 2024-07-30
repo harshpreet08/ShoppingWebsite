@@ -3,26 +3,39 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #f4f4f4;
 }
 
 .loginContainer {
-  max-width: 400px;
+  padding: 20px;
 }
 
 .loginPaper {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  box-shadow: 0 0 8px 2px #b2ebf2;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .form {
-  margin-top: 2rem;
-  width: 100%;
+  margin-top: 10px;
+}
+
+.textField {
+  margin-bottom: 16px;
 }
 
 .submitButton {
-  margin-top: 2rem;
+  margin-top: 20px;
+  padding: 10px 0;
+}
+
+.footerText {
+  margin-top: 20px;
+  font-size: 16px;
 }
