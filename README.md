@@ -9,7 +9,6 @@
 
 <p align="left">
 
-  <img src="./work-in-the-netherlands.png" width="380" height="90">
 </p>
 
 This simple shopping cart prototype shows how React with Typescript, React hooks, react Context and Styled Components can be used to build a friendly user experience with instant visual updates and scaleable code in ecommerce applications.
@@ -55,6 +54,5 @@ The MIT License (MIT). Please see License File for more information.
 <br/>
 <br/>
 
-<p align="center"><img src="http://www.jeffersonribeiro.com/assets/img/apple-icon-180x180.png" width="35" height="35"/></p>
 <p align="center">
 </p>
